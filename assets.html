@@ -198,12 +198,14 @@ figure img{cursor:zoom-in}
  text-align:center;max-width:70ch}
 #lb .cap b{display:block;font-size:16px;margin-bottom:3px}
 #lb .cap a{color:#c9a86a}
-#lb .nav{position:absolute;top:0;bottom:0;width:22%;border:0;background:none;
+/* 上下張的熱區不可以蓋到右上角的關閉鈕(蓋到了就按不掉,只能按 Esc) */
+#lb .nav{position:absolute;top:56px;bottom:56px;width:22%;border:0;background:none;
  cursor:pointer;color:#fff;font-size:30px;opacity:.35;font-family:system-ui,sans-serif}
 #lb .nav:hover{opacity:.9}
 #lb .prev{left:0}#lb .next{right:0}
-#lb .x{position:absolute;top:14px;right:18px;border:0;background:none;color:#fff;
- font-size:26px;cursor:pointer;opacity:.6;line-height:1}
+#lb .x{position:absolute;top:10px;right:12px;z-index:2;border:0;background:none;
+ color:#fff;font-size:26px;cursor:pointer;opacity:.6;line-height:1;
+ width:44px;height:44px}
 #lb .x:hover{opacity:1}
 #lb .n{position:absolute;top:18px;left:20px;color:#8d8478;font-size:12.5px;
  font-family:ui-monospace,monospace}
